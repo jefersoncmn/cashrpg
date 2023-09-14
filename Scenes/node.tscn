@@ -1,0 +1,132 @@
+[gd_scene load_steps=2 format=3 uid="uid://vhbqwttcj58e"]
+
+[ext_resource type="Texture2D" uid="uid://cmyjac6831vax" path="res://icon.svg" id="1_j08r7"]
+
+[node name="Node" type="Node"]
+
+[node name="UIGame" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UISelectGoal" type="Control" parent="UIGame"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIGame/UISelectGoal"]
+layout_direction = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SelectYourGoalLabel" type="Label" parent="UIGame/UISelectGoal/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+text = "Select your goal"
+
+[node name="SelectableGoalImage" type="TextureRect" parent="UIGame/UISelectGoal/VBoxContainer"]
+custom_minimum_size = Vector2(100, 300)
+layout_mode = 2
+texture = ExtResource("1_j08r7")
+expand_mode = 2
+stretch_mode = 3
+
+[node name="SelectableGoalDescription" type="Label" parent="UIGame/UISelectGoal/VBoxContainer"]
+layout_mode = 2
+text = "Goal drescription Goal drescription Goal drescription Goal drescription Goal drescription Goal drescription Goal drescription Goal drescription Goal drescription Goal drescription Goal drescription Goal drescription Goal drescription Goal drescription Goal drescription Goal drescription Goal drescription Goal drescription Goal drescription Goal drescription Goal drescription Goal drescription Goal drescription "
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="UIGame/UISelectGoal/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 20
+
+[node name="GoalListView" type="HBoxContainer" parent="UIGame/UISelectGoal/VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="GoalContainer" type="VBoxContainer" parent="UIGame/UISelectGoal/VBoxContainer/MarginContainer/GoalListView"]
+layout_mode = 2
+
+[node name="GoalImage" type="TextureRect" parent="UIGame/UISelectGoal/VBoxContainer/MarginContainer/GoalListView/GoalContainer"]
+layout_mode = 2
+texture = ExtResource("1_j08r7")
+
+[node name="GoalName" type="Label" parent="UIGame/UISelectGoal/VBoxContainer/MarginContainer/GoalListView/GoalContainer"]
+layout_mode = 2
+text = "Ser dono de uma coleção de carros."
+autowrap_mode = 2
+max_lines_visible = 7
+
+[node name="UIResearch" type="Control" parent="UIGame"]
+visible = false
+layout_mode = 2
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="UIPlayerStats" type="Control" parent="UIGame"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="UIMap" type="Control" parent="UIGame"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="UIStartMenu" type="Control" parent="UIGame"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIGame/UIStartMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -57.5
+offset_top = -68.0
+offset_right = 57.5
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="StartButton" type="Button" parent="UIGame/UIStartMenu/VBoxContainer"]
+layout_mode = 2
+text = "Start"
+
+[node name="ConfigurationButton" type="Button" parent="UIGame/UIStartMenu/VBoxContainer"]
+layout_mode = 2
+text = "Configuration
+"
+
+[node name="PontuationButton" type="Button" parent="UIGame/UIStartMenu/VBoxContainer"]
+layout_mode = 2
+text = "Pontuations"
+
+[node name="ExitButton" type="Button" parent="UIGame/UIStartMenu/VBoxContainer"]
+layout_mode = 2
+text = "Exit"
